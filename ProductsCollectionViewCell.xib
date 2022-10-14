@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="gTV-IL-0wX" customClass="ProductsCollectionViewCell" customModule="SkinCare_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="213" height="241"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="213" height="241"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m8U-VN-eKf">
+                        <rect key="frame" x="10" y="10" width="193" height="191"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHg-Iv-AAz">
+                        <rect key="frame" x="0.0" y="201" width="213" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="6zO-Pe-pTm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LuE-DT-TRb">
+                        <rect key="frame" x="0.0" y="174" width="213" height="27"/>
+                        <color key="backgroundColor" red="0.8156862855" green="0.70588237050000002" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="See more">
+                            <fontDescription key="titleFontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="13"/>
+                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="seeMoreButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="obb-Uz-edW"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="m8U-VN-eKf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="0fB-nc-REa"/>
+                <constraint firstAttribute="bottom" secondItem="VHg-Iv-AAz" secondAttribute="bottom" id="1be-54-SCq"/>
+                <constraint firstItem="VHg-Iv-AAz" firstAttribute="top" secondItem="LuE-DT-TRb" secondAttribute="bottom" id="APc-35-xYR"/>
+                <constraint firstAttribute="trailing" secondItem="m8U-VN-eKf" secondAttribute="trailing" constant="10" id="IJz-CV-YbR"/>
+                <constraint firstAttribute="bottom" secondItem="m8U-VN-eKf" secondAttribute="bottom" constant="40" id="Kfi-xc-1hg"/>
+                <constraint firstItem="VHg-Iv-AAz" firstAttribute="top" secondItem="m8U-VN-eKf" secondAttribute="bottom" id="haV-ya-rUs"/>
+                <constraint firstAttribute="trailing" secondItem="VHg-Iv-AAz" secondAttribute="trailing" id="nqb-1K-BpN"/>
+                <constraint firstAttribute="trailing" secondItem="LuE-DT-TRb" secondAttribute="trailing" id="oL2-zq-NKM"/>
+                <constraint firstItem="VHg-Iv-AAz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sMc-1U-WrW"/>
+                <constraint firstItem="m8U-VN-eKf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="t0t-0Y-sd9"/>
+                <constraint firstItem="LuE-DT-TRb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zg3-NK-f39"/>
+            </constraints>
+            <size key="customSize" width="213" height="241"/>
+            <connections>
+                <outlet property="nameLabel" destination="VHg-Iv-AAz" id="QcP-93-2xH"/>
+                <outlet property="productImg" destination="m8U-VN-eKf" id="S51-Qf-n4I"/>
+            </connections>
+            <point key="canvasLocation" x="255.79710144927537" y="200.55803571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>
